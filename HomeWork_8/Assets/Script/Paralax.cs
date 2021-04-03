@@ -14,6 +14,7 @@ public class Paralax : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * Time.deltaTime * speed);
+
         if (transform.position.x <= lastPositon)
         {
             var currentPos = transform.position;
