@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+
         ScreenWidth = Screen.width;
         characterBody = character.GetComponent<Rigidbody2D>();
     }
