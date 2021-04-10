@@ -7,7 +7,7 @@ public class Paralax1 : MonoBehaviour
     private float length, startpos;
     public GameObject cam;
     public float paralaxEffect;
-    float speed = 1;
+    //float speed = 1;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class Paralax1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void  FixedUpdate()
+    void  Update()
     {
         float temp = (cam.transform.position.x * (1 - paralaxEffect));
         float dist = (cam.transform.position.x * paralaxEffect);
