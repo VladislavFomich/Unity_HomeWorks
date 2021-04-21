@@ -98,7 +98,6 @@ public class EnemyMovement : MonoBehaviour
             else
             {
                 Debug.Log("Вы умерли");
-                player.SetActive(false);
             }
         }
     }

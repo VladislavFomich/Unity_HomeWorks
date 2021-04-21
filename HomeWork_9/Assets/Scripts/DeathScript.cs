@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DeathScript : MonoBehaviour
 {
+    public GameObject startPosition;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Смерть");
-            collision.gameObject.SetActive(false);
+            collision.gameObject.transform.position = startPosition.transform.position;
         }
     }
 }
