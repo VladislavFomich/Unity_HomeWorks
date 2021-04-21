@@ -31,11 +31,15 @@ public class SecondPart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         float zPosition = firstPart.transform.position.z;
         transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
         if (firstHight.isCol == true)
         {
+            hightSecond = firstHight.pointHight;
+            SecondPartGenerate();
+            firstHight.isCol = false;
+            /*
             if (firstHight.pointHight == 3.1f)
             {
                 firstHight.isCol = false;
@@ -54,7 +58,7 @@ public class SecondPart : MonoBehaviour
                 firstHight.isCol = false;
                 hightSecond = 1.0f;
                 SecondPartGenerate();
-            }                    
+            } */                   
         }          
     }   
 

@@ -21,10 +21,10 @@ public class MoveMesh : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             speed = 0;
-            gameObject.AddComponent<MeshCollider>();
+            gameObject.AddComponent<BoxCollider>();
             gameObject.AddComponent<Rigidbody>();
-            MeshCollider meshCOl = GetComponent<MeshCollider>();
-            meshCOl.convex = true;
+            BoxCollider meshCOl = GetComponent<BoxCollider>();
+            //meshCOl.convex = true;
         }
     }
 }
