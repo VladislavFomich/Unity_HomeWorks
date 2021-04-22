@@ -24,7 +24,6 @@ public class MoveMesh : MonoBehaviour
             gameObject.AddComponent<BoxCollider>();
             gameObject.AddComponent<Rigidbody>();
             BoxCollider meshCOl = GetComponent<BoxCollider>();
-            //meshCOl.convex = true;
         }
     }
 }

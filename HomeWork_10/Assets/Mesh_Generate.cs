@@ -6,12 +6,11 @@ using UnityEngine;
 public class Mesh_Generate : MonoBehaviour
 {
     Mesh mesh;
-    bool hitted;
+    [HideInInspector]
+    public bool hitted = false;
 
     [HideInInspector]
     public float pointHight = 0.0f;
-    [HideInInspector]
-    public  bool isCol = false;
 
 
     void Start()
@@ -31,31 +30,38 @@ public class Mesh_Generate : MonoBehaviour
             new Vector3(0.0f,0.0f,pointHight),
             new Vector3(0.0f,0.0f,4.0f),
             new Vector3(4.0f,0.0f,pointHight),
-            new Vector3(4.0f,0.0f,4.0f),         
+            new Vector3(4.0f,0.0f,4.0f),
+
+            new Vector3(0.0f,-0.2f,pointHight),
+            new Vector3(0.0f,-0.2f,4.0f),
+            new Vector3(4.0f,-0.2f,pointHight),
+            new Vector3(4.0f,-0.2f,4.0f)
         };
     }
 
     int[] GenerateTriangles()
     {
-        return new int[] { 0, 1, 2, 1, 3, 2 };
+        return new int[] { 0, 1, 2, 1, 3, 2, 5, 4, 7, 4, 6, 7, 4, 0, 6, 0, 2, 6, 5, 1, 4, 1, 0, 4, 7, 3, 5, 3, 1, 5, 6, 2, 7, 2, 3, 7  };
     }
 
     void OnCollisionEnter(Collision collision)
     {
         
-        if (!hitted)
+        if (hitted == false)
         {
             hitted = true;
-            isCol = true;
 
             foreach (ContactPoint contact in collision.contacts)
             {
-               // ContactPoint contact1 = collision.contacts[0];
                 ContactPoint contact2 = collision.contacts[1];
-               // Vector3 point1 = contact1.point;
                 Vector3 point2 = contact2.point;
-                //Debug.Log(point1);
-                //  Debug.Log(point2);
+
+                // If you want debug contact poinsts, use this
+                /* ContactPoint contact1 = collision.contacts[0];
+               Vector3 point1 = contact1.point;
+               Debug.Log(point1);
+               Debug.Log(point2);*/
+
                 if (point2.z >= 3 && point2.z < 5)
                 {
                     Debug.Log("Cut Big Part");
