@@ -49,7 +49,8 @@ public class Movement : MonoBehaviour
 
     private void RunCharacter(float horizontalInput)
     {
-        characterBody.AddForce(new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0));
+       // characterBody.AddForce(new Vector2(horizontalInput * moveSpeed * Time.deltaTime, 0));
+        characterBody.velocity = new Vector2(horizontalInput * moveSpeed, 0);
     }
     void Flip()
     {
