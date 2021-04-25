@@ -7,16 +7,12 @@ public class BallPower : MonoBehaviour
     Rigidbody body;
     public float force = 300.0f;
     public float timeDestroy;
-    // Start is called before the first frame update
+
     void Start()
     {
         body = GetComponent<Rigidbody>();
         body.AddForce(transform.forward * force);
-    }
+        Destroy(gameObject, timeDestroy);
 
-    // Update is called once per frame
-    void Update()
-    {
-            Destroy(gameObject, timeDestroy);
     }
 }

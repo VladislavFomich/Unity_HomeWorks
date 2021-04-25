@@ -5,9 +5,9 @@ using UnityEngine;
 public class Grenade : MonoBehaviour
 {
     public float delay = 3f;
-
     public float explosionForce = 10f;
     public float radius = 20f;
+    public GameObject particleEffect;
     void Start()
     {
         Invoke("Explode", delay);
@@ -25,6 +25,7 @@ public class Grenade : MonoBehaviour
                 rig.AddExplosionForce(explosionForce, transform.position, radius, 1f, ForceMode.Impulse);
             }
         }
+        Instantiate(particleEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
