@@ -12,7 +12,13 @@ public class BallPower : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
         body.AddForce(transform.forward * force);
-        Destroy(gameObject, timeDestroy);
+        StartCoroutine(ballOff());
 
+    }
+
+    IEnumerator ballOff()
+    {
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(false);
     }
 }
