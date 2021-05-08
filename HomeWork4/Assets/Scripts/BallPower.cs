@@ -6,7 +6,6 @@ public class BallPower : MonoBehaviour
 {
     Rigidbody body;
     public float force = 300.0f;
-    public float timeDestroy;
 
     void Start()
     {

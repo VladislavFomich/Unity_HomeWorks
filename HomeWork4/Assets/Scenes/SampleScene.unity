@@ -14261,6 +14261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252140740}
   - component: {fileID: 252140741}
+  - component: {fileID: 252140742}
   m_Layer: 0
   m_Name: SpawnPointShells
   m_TagString: Untagged
@@ -14296,6 +14297,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShellsPrefab: {fileID: 2579579211431917956, guid: f979b55d04827d04493857b840672a21,
     type: 3}
+--- !u!114 &252140742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252140739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636ac52dd5b16aa47a9b6f6ffd02581c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2579579211431917956, guid: f979b55d04827d04493857b840672a21, type: 3}
+  amount: 5
+  populateOnStart: 1
+  growOverAmount: 1
 --- !u!1 &259725265
 GameObject:
   m_ObjectHideFlags: 0
