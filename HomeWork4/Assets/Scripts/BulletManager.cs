@@ -2,7 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletManager : MonoBehaviour
+/*public enum Bullets
+{
+    Bullet,
+    Granade,
+    Ball
+}*/
+
+public class BulletManager : Singleton<BulletManager>
 {
     public GameObject prefab;
     public int amount = 0;
@@ -11,9 +18,19 @@ public class BulletManager : MonoBehaviour
 
     private List<GameObject> pool = new List<GameObject>();
 
+ /*  public GameObject GetBullet(Bullets type)
+    {
+        switch (type)
+        {
+            case Bullets.Bullet:
+                return()
+        }
+    }
+ */
+
     void Start() 
     {
-        if (populateOnStart && prefab != null && amount > 0) 
+       if (populateOnStart && prefab != null && amount > 0) 
         {
             for (int i = 0; i < amount; i++) 
             {

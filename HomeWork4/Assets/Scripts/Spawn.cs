@@ -17,7 +17,8 @@ public class Spawn : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-          GameObject shoot = Instantiate(ShellsPrefab, transform.position, transform.rotation) as GameObject;           
+            // GameObject shoot = Instantiate(ShellsPrefab, transform.position, transform.rotation) as GameObject;         
+          //  BulletManager.Instantiate(transform.position, Quaternion.Euler(0f,0f,0f));
         }
     }
 }
