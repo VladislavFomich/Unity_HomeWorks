@@ -10,7 +10,7 @@ public class DeathScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Смерть");
-            collision.gameObject.transform.position = startPosition.transform.position;
+           // collision.gameObject.transform.position = startPosition.transform.position;
         }
     }
 }
